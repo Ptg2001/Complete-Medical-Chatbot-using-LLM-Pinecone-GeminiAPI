@@ -1,0 +1,30 @@
+{
+  "name": "medical-chatbot",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "echo 'No build step for static public + functions'",
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.33",
+    "@huggingface/inference": "^4.7.1",
+    "@langchain/community": "^0.3.7",
+    "@langchain/google-genai": "^0.1.3",
+    "@langchain/pinecone": "^0.1.3",
+    "@pinecone-database/pinecone": "^4.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "langchain": "^0.3.7",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@vercel/node": "^3.2.21"
+  },
+  "pnpm": {
+    "overrides": {}
+  }
+}
+

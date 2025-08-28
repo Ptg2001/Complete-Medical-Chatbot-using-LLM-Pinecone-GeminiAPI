@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: medical-chatbot
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci || npm install && npm run build
+    startCommand: node dist-server/server/index.js
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: 10000
+      - key: PINECONE_INDEX
+        sync: false
+      - key: PINECONE_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: HUGGINGFACEHUB_API_KEY
+        sync: false
+
